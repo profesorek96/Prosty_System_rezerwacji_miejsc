@@ -44,6 +44,7 @@ public class WyswietlBaze extends javax.swing.JFrame {
         if(miejsca[9]==1)jButton10.setBackground(Color.RED);
         if(miejsca[10]==1)jButton11.setBackground(Color.RED);
         if(miejsca[11]==1)jButton12.setBackground(Color.RED);
+        
     }
 
     /**

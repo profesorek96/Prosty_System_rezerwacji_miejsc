@@ -40,6 +40,10 @@ public class JConnection {
         }
         return miejsca;
     }
+    public static void WriteDB(int []miejsce)
+    {
+        
+    }
     /*
     try
     {
