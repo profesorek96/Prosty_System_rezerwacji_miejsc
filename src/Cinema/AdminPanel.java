@@ -131,9 +131,10 @@ public class AdminPanel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //String login=jTextField1.getText();
-        String login="";
-        if(login=="")
+        String login=jTextField1.getText();
+        String pass=jPasswordField1.getText();
+        //String login="";
+        if(login.equals("admin")&&pass.equals("admin"))
         {
             WyswietlBaze k = new WyswietlBaze();
             k.setVisible(true);
