@@ -6,7 +6,7 @@
 package Cinema;
 
 import java.awt.Color;
-
+import java.sql.Connection;
 /**
  *
  * @author Krzysztof
@@ -15,7 +15,7 @@ public class Rezerwacja extends javax.swing.JFrame {
 
     /**
      * Creates new form Rezerwacja
-     */
+     */Connection conn = null;
     public Rezerwacja() {
         initComponents();
         jButton1.setBackground(Color.GREEN);
@@ -32,6 +32,8 @@ public class Rezerwacja extends javax.swing.JFrame {
         jButton12.setBackground(Color.GREEN);
         jButton13.setBackground(Color.RED);
         jButton14.setBackground(Color.GREEN);
+        conn=JConnection.ConnecrDB();
+        
     }
 
     /**
