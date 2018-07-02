@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Cinema;
-
+import java.awt.Color;
 /**
  *
  * @author Krzysztof
@@ -14,8 +14,36 @@ public class WyswietlBaze extends javax.swing.JFrame {
     /**
      * Creates new form WyswietlBaze
      */
+    int []miejsca=null;
     public WyswietlBaze() {
         initComponents();
+        miejsca=JConnection.ReadDB();
+        jButton1.setBackground(Color.GREEN);
+        jButton2.setBackground(Color.GREEN);
+        jButton3.setBackground(Color.GREEN);
+        jButton4.setBackground(Color.GREEN);
+        jButton5.setBackground(Color.GREEN);
+        jButton6.setBackground(Color.GREEN);
+        jButton7.setBackground(Color.GREEN);
+        jButton8.setBackground(Color.GREEN);
+        jButton9.setBackground(Color.GREEN);
+        jButton10.setBackground(Color.GREEN);
+        jButton11.setBackground(Color.GREEN);
+        jButton12.setBackground(Color.GREEN);
+        jButton13.setBackground(Color.RED);
+        jButton14.setBackground(Color.GREEN);
+        if(miejsca[0]==1)jButton1.setBackground(Color.RED);
+        if(miejsca[1]==1)jButton2.setBackground(Color.RED);
+        if(miejsca[2]==1)jButton3.setBackground(Color.RED);
+        if(miejsca[3]==1)jButton4.setBackground(Color.RED);
+        if(miejsca[4]==1)jButton5.setBackground(Color.RED);
+        if(miejsca[5]==1)jButton6.setBackground(Color.RED);
+        if(miejsca[6]==1)jButton7.setBackground(Color.RED);
+        if(miejsca[7]==1)jButton8.setBackground(Color.RED);
+        if(miejsca[8]==1)jButton9.setBackground(Color.RED);
+        if(miejsca[9]==1)jButton10.setBackground(Color.RED);
+        if(miejsca[10]==1)jButton11.setBackground(Color.RED);
+        if(miejsca[11]==1)jButton12.setBackground(Color.RED);
     }
 
     /**

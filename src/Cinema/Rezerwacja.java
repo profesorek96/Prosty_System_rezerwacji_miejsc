@@ -15,9 +15,11 @@ public class Rezerwacja extends javax.swing.JFrame {
 
     /**
      * Creates new form Rezerwacja
-     */Connection conn = null;
+     */
+    int []miejsca=null;
     public Rezerwacja() {
         initComponents();
+        miejsca=JConnection.ReadDB();
         jButton1.setBackground(Color.GREEN);
         jButton2.setBackground(Color.GREEN);
         jButton3.setBackground(Color.GREEN);
@@ -32,8 +34,18 @@ public class Rezerwacja extends javax.swing.JFrame {
         jButton12.setBackground(Color.GREEN);
         jButton13.setBackground(Color.RED);
         jButton14.setBackground(Color.GREEN);
-        conn=JConnection.ConnecrDB();
-        
+        if(miejsca[0]==1)jButton1.setBackground(Color.RED);
+        if(miejsca[1]==1)jButton2.setBackground(Color.RED);
+        if(miejsca[2]==1)jButton3.setBackground(Color.RED);
+        if(miejsca[3]==1)jButton4.setBackground(Color.RED);
+        if(miejsca[4]==1)jButton5.setBackground(Color.RED);
+        if(miejsca[5]==1)jButton6.setBackground(Color.RED);
+        if(miejsca[6]==1)jButton7.setBackground(Color.RED);
+        if(miejsca[7]==1)jButton8.setBackground(Color.RED);
+        if(miejsca[8]==1)jButton9.setBackground(Color.RED);
+        if(miejsca[9]==1)jButton10.setBackground(Color.RED);
+        if(miejsca[10]==1)jButton11.setBackground(Color.RED);
+        if(miejsca[11]==1)jButton12.setBackground(Color.RED);
     }
 
     /**
@@ -68,28 +80,88 @@ public class Rezerwacja extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("3");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("4");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("5");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("6");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setText("8");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setText("7");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setText("9");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setText("10");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setText("11");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setText("12");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Wybierz miejsce");
@@ -222,6 +294,90 @@ public class Rezerwacja extends javax.swing.JFrame {
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(miejsca[0]==0)
+        {
+            miejsca[0]=1;
+        }
+        else
+        {
+            miejsca[0]=0;
+        }
+        if(miejsca[0]==1)jButton1.setBackground(Color.RED);
+        else jButton1.setBackground(Color.GREEN);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if(miejsca[1]==0)
+        {
+            miejsca[1]=1;
+        }
+        else
+        {
+            miejsca[1]=0;
+        }
+        if(miejsca[1]==1)jButton2.setBackground(Color.RED);
+        else jButton2.setBackground(Color.GREEN);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if(miejsca[2]==0)
+        {
+            miejsca[2]=1;
+        }
+        else
+        {
+            miejsca[2]=0;
+        }
+        if(miejsca[2]==1)jButton3.setBackground(Color.RED);
+        else jButton3.setBackground(Color.GREEN);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if(miejsca[3]==0)
+        {
+            miejsca[3]=1;
+        }
+        else
+        {
+            miejsca[3]=0;
+        }
+        if(miejsca[3]==1)jButton4.setBackground(Color.RED);
+        else jButton4.setBackground(Color.GREEN);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments
