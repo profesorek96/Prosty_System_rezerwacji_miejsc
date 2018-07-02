@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import javax.swing.JOptionPane;
 import java.sql.Statement;
 import java.sql.ResultSet;
+import java.sql.PreparedStatement;
 
 /**
  *
@@ -42,7 +43,30 @@ public class JConnection {
     }
     public static void WriteDB(int []miejsce)
     {
-        
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/cinemaDB", "root","");
+    
+            // create the java mysql update preparedstatement
+            for(int i=0;i<miejsce.length;i++)
+            {
+                String query = "update cinema set Miejsce = ? where id = ?";
+                PreparedStatement preparedStmt = conn.prepareStatement(query);
+                preparedStmt.setInt   (1, miejsce[i]);
+                preparedStmt.setInt(2, i+1);
+                // execute the java preparedstatement
+                preparedStmt.executeUpdate();
+            }
+            
+      
+            conn.close();
+        }
+        catch (Exception e)
+        {
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
+        }
     }
     /*
     try
